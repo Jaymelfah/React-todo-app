@@ -6,8 +6,15 @@
     },
     "parser": "@babel/eslint-parser",
     "parserOptions": {
+      "requireConfigFile": false,
       "ecmaFeatures": {
-        "jsx": true
+        "jsx": true,
+        "babelOptions": {
+          "parserOpts": {
+            "plugins": ["jsx"]
+          },
+          "presets": ["@babel/preset-react"]
+       }
       },
       "ecmaVersion": 2018,
       "sourceType": "module"
